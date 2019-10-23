@@ -3,7 +3,7 @@ import datetime
 from airflow import DAG
 # from airflow.contrib.operators.kubernetes_pod_operator import \
 # KubernetesPodOperator
-from airflow.operators import BaseOperator
+from airflow.operators import BashOperator
 
 default_args = dict(
     owner="capitancambio",
