@@ -17,7 +17,7 @@ default_args = dict(
 )
 
 dag = DAG("example", schedule_interval=None, catchup=False, default_args=default_args)
-task = BaseOperator(task_id="my_task", bash_command="echo 'hi, this is python in london'", dag=dag)
+task = BashOperator(task_id="my_task", bash_command="echo 'hi, this is python in london'", dag=dag)
 
 
 # task = KubernetesPodOperator(
